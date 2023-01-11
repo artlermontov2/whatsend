@@ -2,7 +2,7 @@ import pandas as pd
 import pywhatkit as pw
 import time
 import pyautogui as pg
-# import keyboard as k
+import keyboard as k # закоментируй, если запускаешь на linux
 import random
 
 
@@ -28,7 +28,7 @@ import random
 
 def read_txt_file():
     """Читает файл с текстом сообщения"""
-    file = '/home/artbvr/Dev/code/whatsend/media/text.txt'
+    file = '<your path>/whatsend/media/text.txt'
     with open(file, 'r', encoding='utf-8') as f:
         text_msg = ''
         for row in f:
@@ -80,9 +80,9 @@ def send_msg_image(name_excel_file, name_img, index):
     """
     index_of_name = index
     msg = read_txt_file()
-    excel_data = pd.read_excel(f'/home/artbvr/Dev/code/whatsend/media/{name_excel_file}.xlsx')  # Открываем файл
+    excel_data = pd.read_excel(f'<your path>/whatsend/media/{name_excel_file}.xlsx')  # Открываем файл
 
-    img = f'/home/artbvr/Dev/code/whatsend/media/{name_img}.jpeg'  # Путь к картинке
+    img = f'<your path>/whatsend/media/{name_img}.jpeg'  # Путь к картинке
     
     for i, row in excel_data.iterrows():
         sec = random.randint(20, 30)
@@ -114,7 +114,7 @@ def send_msg(name_excel_file, index):
     """
     index_of_name = index
     msg = read_txt_file()
-    excel_data = pd.read_excel(f'/home/artbvr/Dev/code/whatsend/media/{name_excel_file}.xlsx')  # Открываем файл
+    excel_data = pd.read_excel(f'<your path>/whatsend/media/{name_excel_file}.xlsx')  # Открываем файл
 
     
     for _, row in excel_data.iterrows():
