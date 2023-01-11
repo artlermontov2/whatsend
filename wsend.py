@@ -2,7 +2,7 @@ import pandas as pd
 import pywhatkit as pw
 import time
 import pyautogui as pg
-import keyboard as k # закоментируй, если запускаешь на linux
+import keyboard as k # закомментируй, если запускаешь на linux
 import random
 
 
